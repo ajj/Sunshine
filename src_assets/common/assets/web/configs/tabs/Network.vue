@@ -33,6 +33,15 @@ const effectivePort = computed(() => +config.value?.port ?? defaultMoonlightPort
       <div class="form-text">{{ $t('config.address_family_desc') }}</div>
     </div>
 
+    <!-- Bind Addresses --> -->
+    <div class="mb-3">
+      <label for="bind_address_ipv4" class="form-label">{{ $t('config.bind_address_ipv4') }}</label>
+      <input type="text" class="form-control" id="bind_address_ipv4" placeholder="123.456.789.12" v-model="config.bind_address_ipv4" />
+      <label for="bind_address_ipv6" class="form-label">{{ $t('config.bind_address_ipv6') }}</label>
+      <input type="text" class="form-control" id="bind_address_ipv6" placeholder="123.456.789.12" v-model="config.bind_address_ipv6" />
+      <div class="form-text">{{ $t('config.bind_address_desc') }}</div>
+    </div>
+
     <!-- Port family -->
     <div class="mb-3">
       <label for="port" class="form-label">{{ $t('config.port') }}</label>

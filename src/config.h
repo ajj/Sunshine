@@ -254,6 +254,9 @@ namespace config {
     std::uint16_t port;
     std::string address_family;
 
+    std::string bind_address_ipv4; // chosen bind address or Auto to use default INADDR_ANY
+    std::string bind_address_ipv6; // chosen bind address or Auto to use default INADDR_ANY
+
     std::string log_file;
     bool notify_pre_releases;
     bool system_tray;
